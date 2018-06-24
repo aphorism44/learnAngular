@@ -1,0 +1,64 @@
+<hr>
+<br><br>
+<h1>Below are a bunch of Built-in Angular Directive Examples</h1>
+<br><br>
+<div *ngIf="condition">condition met</div>
+<div *ngIf="!condition">condition not met</div>
+<br><br>
+<button (click)="toggleCondition()">Toggle Condition</button>
+<br><br>
+<hr>
+<ng-template ngFor let-person [ngForOf]="people">
+  <div>name: {{person}}</div>
+</ng-template>
+<br><br>
+<hr>
+<h3>Monsters and Where They Live</h3>
+<ul *ngFor="let m of monsters">
+  {{m.name}}: {{m.location}}
+</ul>
+<br><br>
+<hr>
+<div [ngSwitch]="time">
+  <span *ngSwitchCase="'night'">It's nighttime.
+    <button (click)="changeToDay()">Sunrise</button>
+  </span>
+  <span *ngSwitchCase="'day'">It's daytime.
+    <button (click)="changeToNight()">Sunset</button>
+  </span>
+</div>
+<br><br>
+<hr>
+<form>
+  <span>Name: </span>
+  <input name="name" [(ngModel)]="name">
+  <br><br>
+  <span>Color: </span>
+  <input type="checkbox" (click)="enabler()">
+  <br><br><hr>
+  <select #optionColor [(ngModel)]="color" name="color"
+    [disabled]="isDisabled">
+    <option *ngFor="let color of colors" (value)="class">
+      {{color}}
+    </option>
+  </select>
+  <br><br><hr>
+  <span>Change Class</span><br>
+  <select #classOption multiple name="styles" (change)="addClass($event)">
+    <option *ngFor="let class of classes" [value]="class">
+      {{class}}
+    </option>
+  </select>
+  <br><br>
+  <hr>
+  <span>
+    Press and Hold Control/Command<br>To Select Multiple Options
+  </span>
+</form>
+<br><br>
+<hr>
+<span>Name: {{name}}</span><br>
+<span [ngClass]="selectedClasses" [ngStyle]="{'color': optionColor.value}">
+  Color: {{optionColor.value}}
+</span>
+<br><br>

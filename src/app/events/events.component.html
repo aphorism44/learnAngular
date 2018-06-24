@@ -1,0 +1,32 @@
+<div (mousemove)="move($event)">
+  <img [src]="imageUrl"
+    (mouseenter)="mouseGoesIn()"
+    (mouseleave)="mouseLeft()"
+    (dblclick)="changeImg()"/>
+    <br>
+  <button (click)="changeImg()">Change Picture</button>
+  <hr>
+
+  <input (keyup)="onKeyUp($event)"
+  (keydown)="onKeyDown($event)"
+  (keypress)="keypress($event)"
+  (blur)="underTheScope($event)"
+  (focus)="underTheScope($event)">
+  {{view}}
+  <p>On key up: {{upValues}}</p>
+  <p>On key down: {{downValues}}</p>
+  <p>On key press: {{keypressValue}}</p>
+  <p (mousemove)="move($event)">
+    x-coordinate: {{x}}
+    <br>
+    y-coordinate: {{y}}
+    <br>  
+  </p>
+</div>
+<br><br>
+<h1>Now for some 2-way binding with ngModel!</h1>
+  <input [(ngModel)]="text"><br>
+  <input bindon-ngModel="text"><br>
+  <input [value]="text" (input)="text=$event.target.value"><br>
+  <h1>{{text}}</h1>
+<br><br>

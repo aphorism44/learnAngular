@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  speed: string = "Slow";
+  title: string = 'First Angular App';
+  vehicle: string = "Train";
+  newSpeed: string = "Hypersonic";
+  newVehicle: string = "Plane";
+
+  upper = function(str: any) {
+    str = str.toUpperCase();
+    return str;
+  }
+
+  lower = function(str:any) {
+    return str.toLowerCase();
+  }
+
+  setValues = function(speed: any, vehicle: any) {
+    this.speed = speed;
+    this.vehicle = vehicle;
+  }
+
+
 }
