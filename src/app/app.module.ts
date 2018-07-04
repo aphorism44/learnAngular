@@ -10,9 +10,12 @@ import { OuterComponent } from './outer/outer.component';
 import { InnerComponent } from './inner/inner.component';
 import { EventsComponent } from './events/events.component';
 import { DirectivesComponent } from './directives/directives.component';
-import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
-import { CustomDirectiveDirective } from './custom-directive.directive';
-import { ZoomCustomDirectiveDirective } from './zoom-custom-directive.directive';
+import { ZoomDirective } from './zoom.directive';
+import { CustomeventComponent } from './customevent/customevent.component';
+import { ChildComponent } from './child/child.component';
+import { CharacterComponent } from './character/character.component';
+import { DetailsComponent } from './details/details.component';
+import { ObservableComponent } from './observable/observable.component';
 
 
 @NgModule({
@@ -24,9 +27,12 @@ import { ZoomCustomDirectiveDirective } from './zoom-custom-directive.directive'
     InnerComponent,
     EventsComponent,
     DirectivesComponent,
-    CustomDirectiveComponent,
-    CustomDirectiveDirective,
-    ZoomCustomDirectiveDirective
+    ZoomDirective,
+    CustomeventComponent,
+    ChildComponent,
+    CharacterComponent,
+    DetailsComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule

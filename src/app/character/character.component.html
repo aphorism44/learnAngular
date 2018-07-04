@@ -1,0 +1,8 @@
+<h2>Custom Event in Nested Components</h2>
+<div *ngFor="let character of characters">
+  <div class="char" (click)="selectCharacter(character)">
+    {{character.name}}
+  </div>
+</div>
+<app-details [character]="character" (CharacterDeleted)="deleteCharacter($event)">
+</app-details>

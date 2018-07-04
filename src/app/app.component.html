@@ -39,4 +39,13 @@
   <app-color></app-color>
   <app-outer></app-outer>
   <app-directives></app-directives>
-  <app-custom-directive></app-custom-directive>
+  <h1>
+    Custom Zoom Directive
+  </h1>
+  <span *ngFor="let image of images">
+    <img zoom src="{{image}}" />
+  </span>
+  <br><br>
+  <app-customevent></app-customevent>
+  <app-character></app-character>
+  <app-observable></app-observable>

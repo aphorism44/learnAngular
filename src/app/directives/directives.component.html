@@ -36,9 +36,8 @@
   <span>Color: </span>
   <input type="checkbox" (click)="enabler()">
   <br><br><hr>
-  <select #optionColor [(ngModel)]="color" name="color"
-    [disabled]="isDisabled">
-    <option *ngFor="let color of colors" (value)="class">
+  <select #optionColor [(ngModel)]="color" name="color" [disabled]="isDisabled">
+    <option *ngFor="let color of colors" [value]="color">
       {{color}}
     </option>
   </select>
@@ -58,7 +57,7 @@
 <br><br>
 <hr>
 <span>Name: {{name}}</span><br>
-<span [ngClass]="selectedClasses" [ngStyle]="{'color': optionColor.value}">
+<span [ngClass]="selectedClass" [ngStyle]="{'color': optionColor.value}">
   Color: {{optionColor.value}}
 </span>
 <br><br>

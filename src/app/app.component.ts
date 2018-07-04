@@ -12,6 +12,13 @@ export class AppComponent {
   newSpeed: string = "Hypersonic";
   newVehicle: string = "Plane";
 
+  //below are for use with custom directive
+  images: string[] = [
+    "../assets/images/flower.jpg"
+    , "../assets/images/lake.jpg"
+    , "../assets/images/bison.jpg"
+  ];
+
   upper = function(str: any) {
     str = str.toUpperCase();
     return str;
