@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DateComponent } from './date/date.component';
@@ -16,7 +15,7 @@ import { ChildComponent } from './child/child.component';
 import { CharacterComponent } from './character/character.component';
 import { DetailsComponent } from './details/details.component';
 import { ObservableComponent } from './observable/observable.component';
-
+import { InMemoryWebApiModule } from '../../node_modules/angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -32,12 +31,11 @@ import { ObservableComponent } from './observable/observable.component';
     ChildComponent,
     CharacterComponent,
     DetailsComponent,
-    ObservableComponent
+    ObservableComponent,
   ],
   imports: [
     BrowserModule
     , FormsModule
-    , HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
